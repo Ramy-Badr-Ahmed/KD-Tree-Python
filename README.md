@@ -1,5 +1,7 @@
 ![Python](https://img.shields.io/badge/Python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![NumPy](https://img.shields.io/badge/Numpy-777BB4.svg?style=plastic&logo=numpy&logoColor=white) ![GitHub](https://img.shields.io/github/license/Ramy-Badr-Ahmed/KD-Tree-Python?style=plastic&cached)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13384095.svg)](https://doi.org/10.5281/zenodo.13384095)
+
 # KD-Tree Implementation in Python
 
 This repository contains Python implementation of the kd-tree data structure and performing k-nearest neighbour search.
