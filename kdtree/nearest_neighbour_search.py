@@ -3,7 +3,7 @@ def nearest_neighbour_search(root, query_point):
     nearest_dist = float('inf')
     nodes_visited = 0
 
-    def search(node, depth=0):
+    def search(node, depth = 0):
         nonlocal nearest_point, nearest_dist, nodes_visited
         if node is None:
             return
