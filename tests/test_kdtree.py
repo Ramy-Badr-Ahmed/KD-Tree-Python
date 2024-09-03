@@ -16,6 +16,11 @@ class TestKDTree(unittest.TestCase):
     def test_build_kdtree(self):
         """
         Test that KD-Tree is built correctly for different cases.
+
+        Cases:
+        - Empty points list.
+        - Positive depth value.
+        - Negative depth value.
         """
         test_cases = [
             (0, self.cube_size, self.num_dimensions, 0, None),  # Empty points list
@@ -24,14 +29,14 @@ class TestKDTree(unittest.TestCase):
         ]
 
         for num_points, cube_size, num_dimensions, depth, expected_result in test_cases:
-            with self.subTest(num_points=num_points, cube_size=cube_size, num_dimensions=num_dimensions, depth=depth, expected_result=expected_result):
+            with self.subTest(num_points = num_points, cube_size = cube_size, num_dimensions = num_dimensions, depth = depth, expected_result = expected_result):
                 points = (
                     hypercube_points(num_points, cube_size, num_dimensions).tolist()
                     if num_points > 0
                     else []
                 )
 
-                kdtree = build_kdtree(points, depth=depth)
+                kdtree = build_kdtree(points, depth = depth)
 
                 if expected_result is None:
                     # Empty points list case
@@ -59,9 +64,7 @@ class TestKDTree(unittest.TestCase):
         rng = np.random.default_rng()
         query_point = rng.random(self.num_dimensions).tolist()
 
-        nearest_point, nearest_dist, nodes_visited = nearest_neighbour_search(
-            kdtree, query_point
-        )
+        nearest_point, nearest_dist, nodes_visited = nearest_neighbour_search(kdtree, query_point)
 
         # Check that nearest point is not None
         self.assertIsNotNone(nearest_point)
@@ -79,9 +82,7 @@ class TestKDTree(unittest.TestCase):
         empty_kdtree = build_kdtree([])
         query_point = [0.0] * self.num_dimensions
 
-        nearest_point, nearest_dist, nodes_visited = nearest_neighbour_search(
-            empty_kdtree, query_point
-        )
+        nearest_point, nearest_dist, nodes_visited = nearest_neighbour_search(empty_kdtree, query_point)
 
         # With an empty KD-Tree, nearest_point should be None
         self.assertIsNone(nearest_point)
