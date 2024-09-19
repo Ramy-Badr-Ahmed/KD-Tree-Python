@@ -6,7 +6,7 @@
 
 This repository contains Python implementation of the kd-tree data structure and performing k-nearest neighbour search.
 
-The Matlab lab implementation is located here: [KD-Tree-Matlab](https://github.com/Ramy-Badr-Ahmed/KD-Tree-Matlab)
+Its Matlab implementation is located here: [KD-Tree-Matlab](https://github.com/Ramy-Badr-Ahmed/KD-Tree-Matlab)
 
 ### About
 The kd-tree is a space-partitioning data structure for organizing points in a k-dimensional space.
